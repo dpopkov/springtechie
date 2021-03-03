@@ -9,3 +9,6 @@ History of implementation
 6. Application Users.
 7. Add [In Memory User Details Manager](Howto.md#3---in-memory-user-details-manager).
 8. Add [Password Encoding with BCrypt](Howto.md#4---password-encoding-with-bCrypt).
+9. Roles and Permissions.
+10. Add Admin User.
+11. Create [Roles and Permissions using Enums](Howto.md#5---roles-and-permissions-using-enum).

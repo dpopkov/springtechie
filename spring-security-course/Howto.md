@@ -1,6 +1,15 @@
 How-to
 ======
 
+5 - Roles and Permissions using Enum
+------------------------------------
+* Add user in ApplicationSecurityConfig with role ADMIN.
+* Add enum ApplicationUserPermission that should contain all possible permissions.
+* Add guava dependency for helper methods.
+* Add enum ApplicationUserRole containing set of ApplicationUserPermission values.
+* Attach the roles to UserDetails in ApplicationSecurityConfig.
+* At this point the Roles are not used to secure API yet.
+
 4 - Password Encoding with BCrypt
 ---------------------------------
 * Add security.PasswordConfig class, annotate it with @Configuration.
