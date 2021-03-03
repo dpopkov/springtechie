@@ -1,6 +1,10 @@
 How-to
 ======
 
+2 - Use Ant Matchers
+--------------------
+* In ApplicationSecurityConfig after authorizeRequests() add `antMatchers("url").permitAll()` 
+
 1 - Implement Basic Auth
 ------------------------
 * Add package security
