@@ -1,6 +1,14 @@
 How-to
 ======
 
+4 - Password Encoding with BCrypt
+---------------------------------
+* Add security.PasswordConfig class, annotate it with @Configuration.
+* Add method `passwordEncoder()` returning PasswordEncoder and annotated with @Bean.
+* Return instance of BCryptPasswordEncoder.
+* Add field `PasswordEncoder passwordEncoder` to ApplicationSecurityConfig and constructor.
+* Use this passwordEncoder to encode password for UserDetails in method `userDetailsService()`.
+
 3 - In Memory User Details Manager
 ----------------------------------
 * In ApplicationSecurityConfig override `userDetailsService()`, add `@Bean` annotation to the method.

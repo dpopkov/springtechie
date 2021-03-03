@@ -8,3 +8,4 @@ History of implementation
 5. [Use Ant Matchers](Howto.md#2---use-ant-matchers) to whitelist specific urls.
 6. Application Users.
 7. Add [In Memory User Details Manager](Howto.md#3---in-memory-user-details-manager).
+8. Add [Password Encoding with BCrypt](Howto.md#4---password-encoding-with-bCrypt).
