@@ -1,6 +1,11 @@
 How-to
 ======
 
+6 - Role based Authentication
+-----------------------------
+* Add `antMatchers("url").hasRole("role")` to configure() in ApplicationSecurityConfig.
+* Now only STUDENT is allowed to access "/api".
+
 5 - Roles and Permissions using Enum
 ------------------------------------
 * Add user in ApplicationSecurityConfig with role ADMIN.

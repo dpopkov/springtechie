@@ -12,3 +12,4 @@ History of implementation
 9. Roles and Permissions.
 10. Add Admin User.
 11. Create [Roles and Permissions using Enums](Howto.md#5---roles-and-permissions-using-enum).
+12. Use [Role based Authentication](Howto.md#6---role-based-authentication) to protect API.
