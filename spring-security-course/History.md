@@ -6,3 +6,5 @@ History of implementation
 3. [Implement Basic Auth](Howto.md#1---implement-basic-auth).
 4. Use Postman.
 5. [Use Ant Matchers](Howto.md#2---use-ant-matchers) to whitelist specific urls.
+6. Application Users.
+7. Add [In Memory User Details Manager](Howto.md#3---in-memory-user-details-manager).

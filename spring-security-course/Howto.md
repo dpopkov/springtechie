@@ -1,6 +1,13 @@
 How-to
 ======
 
+3 - In Memory User Details Manager
+----------------------------------
+* In ApplicationSecurityConfig override `userDetailsService()`, add `@Bean` annotation to the method.
+* Use `org.springframework.security.core.userdetails.User` builder to add username, password, roles
+* Create and return `InMemoryUserDetailsManager` instance.
+* This is __not working__ because there is no PasswordEncoder mapped yet.
+
 2 - Use Ant Matchers
 --------------------
 * In ApplicationSecurityConfig after authorizeRequests() add `antMatchers("url").permitAll()` 
