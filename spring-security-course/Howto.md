@@ -9,8 +9,10 @@ How-to
 * Implement and map methods in StudentManagementController.
 * Disable CSRF in ApplicationSecurityConfig.
 * Option 1: use `antMatchers(httpMethod, pattern)` with `hasAuthority("permissionName")` in ApplicationSecurityConfig.
-* Order of antMatchers does matter!
-* Add Authorities to Users: implement `getGrantedAuthorities()` in ApplicationUserRole, update building user details.
+    * Order of antMatchers does matter!
+    * Add Authorities to Users: implement `getGrantedAuthorities()` in ApplicationUserRole, update building user details.
+* Option 2: use `@PreAuthorize` annotations within methods. 
+    * Add `@EnableGlobalMethodSecurity(prePostEnabled = true)` to ApplicationSecurityConfig.
 
 6 - Role based Authentication
 -----------------------------
