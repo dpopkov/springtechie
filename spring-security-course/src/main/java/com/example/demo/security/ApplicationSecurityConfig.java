@@ -12,8 +12,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-import java.util.Random;
-
 import static com.example.demo.security.ApplicationUserRole.*;
 
 @Slf4j
@@ -30,6 +28,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()   // csrf will be learned later
                 .authorizeRequests()
                 .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
                 .antMatchers("/api/**").hasRole(STUDENT.name())
@@ -43,19 +42,16 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     protected UserDetailsService userDetailsService() {
         final UserDetails adminUser = createUserDetails("admin", "pass1", ADMIN);
+        final UserDetails tomUser = createUserDetails("tom", "pass1", ADMINTRAINEE);
         final UserDetails aliceUser = createUserDetails("alice", "pass2", STUDENT);
         return new InMemoryUserDetailsManager(
                 aliceUser,
+                tomUser,
                 adminUser
         );
     }
 
-    /** This random used just for research when restarting the app. It may be removed later. */
-    private final Random random = new Random();
-
     private UserDetails createUserDetails(String name, String password, ApplicationUserRole role) {
-        password += random.nextInt(10);
-
         log.trace("######### Creating details for user {} with password {}", name, password);
         return User.builder()
                 .username(name)

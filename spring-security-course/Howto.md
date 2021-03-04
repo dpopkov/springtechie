@@ -1,6 +1,14 @@
 How-to
 ======
 
+7 - Permission Based Authentication
+-----------------------------------
+* Add admin-trainee role to ApplicationUserRole.
+* Add user details for him to userDetailsService().
+* Add StudentManagementController class annotated @RestController, @RequestMapping for management.
+* Implement and map methods in StudentManagementController.
+* Disable CSRF in ApplicationSecurityConfig.
+
 6 - Role based Authentication
 -----------------------------
 * Add `antMatchers("url").hasRole("role")` to configure() in ApplicationSecurityConfig.
