@@ -21,8 +21,6 @@ import static com.example.demo.security.ApplicationUserRole.*;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    private static final String MANAGEMENT_API = "/management/api/**";
-
     private final PasswordEncoder passwordEncoder;
 
     public ApplicationSecurityConfig(PasswordEncoder passwordEncoder) {
@@ -32,14 +30,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()   // csrf will be learned later
+                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
                 .antMatchers("/api/**").hasRole(STUDENT.name())
-//                .antMatchers(HttpMethod.DELETE, MANAGEMENT_API).hasAuthority(COURSE_WRITE.getPermission())
-//                .antMatchers(HttpMethod.POST, MANAGEMENT_API).hasAuthority(COURSE_WRITE.getPermission())
-//                .antMatchers(HttpMethod.PUT, MANAGEMENT_API).hasAuthority(COURSE_WRITE.getPermission())
-//                .antMatchers(HttpMethod.GET,MANAGEMENT_API).hasAnyRole(ADMIN.name(), ADMINTRAINEE.name())
                 .anyRequest()
                 .authenticated()
                 .and()
