@@ -8,6 +8,9 @@ How-to
 * Add StudentManagementController class annotated @RestController, @RequestMapping for management.
 * Implement and map methods in StudentManagementController.
 * Disable CSRF in ApplicationSecurityConfig.
+* Option 1: use `antMatchers(httpMethod, pattern)` with `hasAuthority("permissionName")` in ApplicationSecurityConfig.
+* Order of antMatchers does matter!
+* Add Authorities to Users: implement `getGrantedAuthorities()` in ApplicationUserRole, update building user details.
 
 6 - Role based Authentication
 -----------------------------
