@@ -17,3 +17,4 @@ History of implementation
 14. Enable [Form Based Authentication](Howto.md#8---form-based-authentication).
 15. [Redirecting after success Login](Howto.md#9---redirect-after-success-login).
 16. Implement [Remember Me](Howto.md#10---remember-me)
+17. Implement [Logout](Howto.md#11---logout)

@@ -1,6 +1,14 @@
 How-to
 ======
 
+11 - Logout
+-----------
+* Add `logout()` and `logoutUrl("url")` to config.
+* Add `clearAuthentication(true)` and `invalidateHttpSession(true)`. 
+* Add `deleteCookies()` and `logoutSuccessUrl()`. 
+* Add `logoutRequestMatcher(..)`.
+* Add Logout button.
+
 10 - Remember Me
 ----------------
 * Add `rememberMe()` in ApplicationSecurityConfig.
