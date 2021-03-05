@@ -1,6 +1,10 @@
 How-to
 ======
 
+9 - Redirect after success login
+--------------------------------
+* Add `defaultSuccessUrl("/url", true)` in ApplicationSecurityConfig.
+
 8 - Form Based Authentication
 -----------------------------
 * Use `formLogin()` instead of `httpBasic()` in ApplicationSecurityConfig.
