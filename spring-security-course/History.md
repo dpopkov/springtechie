@@ -14,3 +14,4 @@ History of implementation
 11. Create [Roles and Permissions using Enums](Howto.md#5---roles-and-permissions-using-enum).
 12. Use [Role based Authentication](Howto.md#6---role-based-authentication) to protect API.
 13. Implement [Permission Based Authentication](Howto.md#7---permission-based-authentication).
+14. Enable [Form Based Authentication](Howto.md#8---form-based-authentication).

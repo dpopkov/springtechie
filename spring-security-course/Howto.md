@@ -1,6 +1,13 @@
 How-to
 ======
 
+8 - Form Based Authentication
+-----------------------------
+* Use `formLogin()` instead of `httpBasic()` in ApplicationSecurityConfig.
+* Add custom login page: use `loginPage("page")` after formLogin().
+* Add thymeleaf to pom.xml and login.html to templates.
+* Add TemplateController mapped to login page.
+
 7 - Permission Based Authentication
 -----------------------------------
 * Add admin-trainee role to ApplicationUserRole.
