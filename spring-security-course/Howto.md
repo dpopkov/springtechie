@@ -1,6 +1,12 @@
 How-to
 ======
 
+10 - Remember Me
+----------------
+* Add `rememberMe()` in ApplicationSecurityConfig.
+* Add 'remember-me' checkbox to login page.
+* Add `tokenValiditySeconds(seconds)` and `key("key-string")` to ApplicationSecurityConfig
+
 9 - Redirect after success login
 --------------------------------
 * Add `defaultSuccessUrl("/url", true)` in ApplicationSecurityConfig.
