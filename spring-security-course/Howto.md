@@ -9,6 +9,14 @@ How-to
 * Add `logoutRequestMatcher(..)`.
 * Add Logout button.
 
+12 - JSON Web Token I
+---------------------
+* Add JWT library.
+* Create package `jwt`.
+* Create class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter.
+* Create class UsernamePasswordAuthenticationRequest.
+* Implement JWT Filter and attempt Authentication - JwtUsernamePasswordAuthenticationFilter.
+
 11 - DB Authentication
 ----------------------
 * Create package `auth`.
