@@ -18,3 +18,4 @@ History of implementation
 15. [Redirecting after success Login](Howto.md#9---redirect-after-success-login).
 16. Implement [Remember Me](Howto.md#10---remember-me)
 17. Implement [Logout](Howto.md#11---logout)
+18. Implement [DB Authentication](Howto.md#11---db-authentication)

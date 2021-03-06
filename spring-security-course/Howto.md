@@ -9,6 +9,15 @@ How-to
 * Add `logoutRequestMatcher(..)`.
 * Add Logout button.
 
+11 - DB Authentication
+----------------------
+* Create package `auth`.
+* Create class ApplicationUser that implements UserDetails.
+* Create class ApplicationUserService that implements UserDetailsService, annotate @Service.
+* Create interface ApplicationUserDao. 
+* Fake ApplicationUserService, annotate @Repository("fake"), use @Qualifier("fake") in ApplicationUserService.
+* Use DAO Authentication Provider: add method daoAuthenticationProvider() annotated @Bean.
+
 10 - Remember Me
 ----------------
 * Add `rememberMe()` in ApplicationSecurityConfig.
