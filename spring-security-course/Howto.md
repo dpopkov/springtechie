@@ -16,6 +16,8 @@ How-to
 * Create class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter.
 * Create class UsernamePasswordAuthenticationRequest.
 * Implement JWT Filter and attempt Authentication - JwtUsernamePasswordAuthenticationFilter.
+* Override `successfulAuthentication()` method in JwtUsernamePasswordAuthenticationFilter to send token.
+* Configure: add the created filter to ApplicationSecurityConfig.
 
 11 - DB Authentication
 ----------------------
