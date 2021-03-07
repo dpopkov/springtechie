@@ -18,6 +18,7 @@ How-to
 * Implement JWT Filter and attempt Authentication - JwtUsernamePasswordAuthenticationFilter.
 * Override `successfulAuthentication()` method in JwtUsernamePasswordAuthenticationFilter to send token.
 * Configure: add the created filter to ApplicationSecurityConfig.
+* Create JwtTokenVerifierFilter and register it.
 
 11 - DB Authentication
 ----------------------
