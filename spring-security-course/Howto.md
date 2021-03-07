@@ -19,6 +19,7 @@ How-to
 * Override `successfulAuthentication()` method in JwtUsernamePasswordAuthenticationFilter to send token.
 * Configure: add the created filter to ApplicationSecurityConfig.
 * Create JwtTokenVerifierFilter and register it.
+* Refactoring: create and use JwtConfig.
 
 11 - DB Authentication
 ----------------------
