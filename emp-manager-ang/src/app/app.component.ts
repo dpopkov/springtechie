@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Employee} from "./employee";
 import {EmployeeService} from "./employee.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -27,5 +28,9 @@ export class AppComponent implements OnInit{
         alert(error.message);
       }
     )
+  }
+
+  public staticImagePathFor(employee: Employee): string {
+    return environment.apiBaseUrl + '/' + employee.imageUrl;
   }
 }

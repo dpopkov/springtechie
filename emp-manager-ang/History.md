@@ -9,3 +9,4 @@ Steps of Implementation
 6. Create `apiBaseUrl` field in environment.ts and use it EmployeeService.
 7. Add EmployeeService to providers in app.module.ts (not sure about it because EmployeeService is Injectable).
 8. Configure Cross-Origin Resource Sharing (CORS) on Back-End.
+9. Add UI to Front-End.
