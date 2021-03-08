@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Bobby",
+    "email": "bobby@mail.org",
+    "jobTitle": "Tester",
+    "phone": "123-4567",
+    "imageUrl": "img/avatar7.png"
+  },
+  {
+    "name": "Alice",
+    "email": "alice@mail.org",
+    "jobTitle": "Dev",
+    "phone": "456-4567",
+    "imageUrl": "img/avatar6.png"
+  },
+  {
+    "name": "Timmy",
+    "email": "timmy@mail.org",
+    "jobTitle": "Dev",
+    "phone": "987-4567",
+    "imageUrl": "img/avatar5.png"
+  },
+  {
+    "name": "Alison",
+    "email": "alison@mail.org",
+    "jobTitle": "Dev",
+    "phone": "321-4567",
+    "imageUrl": "img/avatar3.png"
+  }
+]
