@@ -14,3 +14,4 @@ Steps of Implementation
 11. Add FormsModule to app.module.ts.
 12. Use #addForm as reference to the form and (ngSubmit) to specify handling method.
 13. Implement method `onAddEmployee(NgForm)`.
+14. Implement Update functionality.

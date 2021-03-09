@@ -12,6 +12,7 @@ import {NgForm} from "@angular/forms";
 })
 export class AppComponent implements OnInit{
   public employees: Employee[];
+  public editEmployee: Employee;
 
   constructor(private employeeService: EmployeeService) {
   }
@@ -41,6 +42,7 @@ export class AppComponent implements OnInit{
       button.setAttribute('data-target', '#addEmployeeModal');
     }
     else if (mode === 'edit') {
+      this.editEmployee = employee;
       button.setAttribute('data-target', '#updateEmployeeModal');
     }
     else if (mode === 'delete') {
@@ -58,6 +60,20 @@ export class AppComponent implements OnInit{
   onAddEmployee(addForm: NgForm): void {
     document.getElementById('add-employee-form').click();
     this.employeeService.addEmployee(addForm.value).subscribe(
+      (response: Employee) => {
+        console.log(response);
+        this.getEmployees();
+        addForm.reset();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+        addForm.reset();
+      }
+    );
+  }
+
+  onUpdateEmployee(employee: Employee): void {
+    this.employeeService.updateEmployee(employee).subscribe(
       (response: Employee) => {
         console.log(response);
         this.getEmployees();
