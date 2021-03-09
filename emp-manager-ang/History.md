@@ -10,3 +10,7 @@ Steps of Implementation
 7. Add EmployeeService to providers in app.module.ts (not sure about it because EmployeeService is Injectable).
 8. Configure Cross-Origin Resource Sharing (CORS) on Back-End.
 9. Add UI to Front-End.
+10. Add UI Modal logic.
+11. Add FormsModule to app.module.ts.
+12. Use #addForm as reference to the form and (ngSubmit) to specify handling method.
+13. Implement method `onAddEmployee(NgForm)`.
