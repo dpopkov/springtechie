@@ -15,3 +15,4 @@ Steps of Implementation
 12. Use #addForm as reference to the form and (ngSubmit) to specify handling method.
 13. Implement method `onAddEmployee(NgForm)`.
 14. Implement Update functionality.
+15. Implement Delete functionality.
