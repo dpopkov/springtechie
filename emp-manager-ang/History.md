@@ -16,3 +16,4 @@ Steps of Implementation
 13. Implement method `onAddEmployee(NgForm)`.
 14. Implement Update functionality.
 15. Implement Delete functionality.
+16. Implement Search functionality.
