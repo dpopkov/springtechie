@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Do not commit these files:
+temp-*.txt
