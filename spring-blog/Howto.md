@@ -13,3 +13,4 @@ How to implement
 * Create DTO for registering (dto.RegisterRequest).
 * Create AuthService to signup and save the new user.
 * Run application with testing POST request to create the first user.
+* Provide PasswordEncoder bean (BCryptPasswordEncoder).
