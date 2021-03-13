@@ -1,6 +1,22 @@
 How to implement
 ================
 
+2 - Implement Login using JWT
+-----------------------------
+* Implement end point to login:
+    * add DTO LoginRequest
+    * add login(LoginRequest) method to AuthController
+    * add login(LoginRequest) method to AuthService
+    * add configureGlobal(AuthenticationManagerBuilder) method to SecurityConfig
+    * create @Service class UserDetailsServiceImpl implements UserDetailsService
+    * add method findByUserName(String) to UserRepository
+    * override authenticationManagerBean() method in SecurityConfig
+    * add AuthenticationManager field to AuthService and use it in login method
+    * add jjwt dependency to pom.xml
+    * create package 'security'
+    * create class JwtProvider and add JwtProvider field to AuthService
+    * use it to generate token 
+
 1 - Configure Spring Security
 -----------------------------
 * Add `spring-boot-starter-security` and `spring-security-test` dependencies.
