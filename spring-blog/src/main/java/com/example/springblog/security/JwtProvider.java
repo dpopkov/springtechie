@@ -1,5 +1,7 @@
 package com.example.springblog.security;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -19,11 +21,13 @@ import java.security.Key;
 public class JwtProvider {
 
     private Key key;
+    private JwtParser jwtParser;
 
     @PostConstruct
     public void init() {
         log.trace("init()");
         key = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+        jwtParser = Jwts.parserBuilder().setSigningKey(key).build();
     }
 
     public String generateToken(Authentication authentication) {
@@ -33,5 +37,18 @@ public class JwtProvider {
                 .setSubject(principal.getUsername())
                 .signWith(key)
                 .compact();
+    }
+
+    public boolean validateToken(String jwt) {
+        log.trace("validateToken(String) with {}", jwt);
+        jwtParser.parseClaimsJws(jwt);  // if executes without errors then the token is valid
+        return true;
+    }
+
+    public String getUsernameFromJWT(String token) {
+        Claims claims = jwtParser.parseClaimsJws(token).getBody();
+        String subject = claims.getSubject();
+        log.trace("getUsernameFromJWT({}) returns {}", token, subject);
+        return subject;
     }
 }

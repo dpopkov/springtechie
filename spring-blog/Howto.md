@@ -1,6 +1,16 @@
 How to implement
 ================
 
+3 - Validate JWT
+----------------
+* create class JwtAuthenticationFilter extends OncePerRequestFilter
+* override method doFilterInternal
+* implement method getJwtFromRequest(HttpServletRequest)
+* add method validateToken(String) to JwtProvider
+* use jwtProvider and userDetailsService in doFilterInternal method in JwtAuthenticationFilter
+* add jwtAuthenticationFilter() bean method to SecurityConfig
+* register JwtAuthenticationFilter in method configure in SecurityConfig
+
 2 - Implement Login using JWT
 -----------------------------
 * Implement end point to login:
