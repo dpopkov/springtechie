@@ -5,4 +5,4 @@ Steps of Implementation
 2. Create domain entities in package `model`.
 3. Create Repositories.
 4. [Setup Spring Security](Howto.md#1---configure-spring-security)
-5. Implement Login using JWT.
+5. [Implement Login using JWT](Howto.md#2---implement-login-using-jwt).

@@ -5,6 +5,7 @@ import com.example.springblog.dto.RegisterRequest;
 import com.example.springblog.model.User;
 import com.example.springblog.repository.UserRepository;
 import com.example.springblog.security.JwtProvider;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -12,6 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class AuthService {
 
@@ -21,6 +23,7 @@ public class AuthService {
     private final JwtProvider jwtProvider;
 
     public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager, JwtProvider jwtProvider) {
+        log.trace("construct AuthService()");
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
@@ -28,6 +31,7 @@ public class AuthService {
     }
 
     public void signup(RegisterRequest dto) {
+        log.trace("signup(RegisterRequest) with {}", dto);
         User user = new User();
         user.setUserName(dto.getUsername());
         user.setPassword(encodePassword(dto.getPassword()));
@@ -40,6 +44,7 @@ public class AuthService {
     }
 
     public String login(LoginRequest loginRequest) {
+        log.trace("login(LoginRequest) with {}", loginRequest);
         final Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginRequest.getUsername(), loginRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authenticate);
