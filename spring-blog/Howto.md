@@ -1,6 +1,18 @@
 How to implement
 ================
 
+4 - Manage Posts
+----------------
+* create class PostController
+* create class PostDto
+* create @Service class PostService
+* add method getCurrentUser() to AuthService
+* use PostRepository in PostService
+* use PostService in PostController to create post
+* implement createPost(@RequestBody PostDto) method in PostController
+* add methods showAllPosts() and getSinglePost(id) to PostController
+* implement methods getAllPosts() and findById(id) in PostService
+
 3 - Validate JWT
 ----------------
 * create class JwtAuthenticationFilter extends OncePerRequestFilter
