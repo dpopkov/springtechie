@@ -1,6 +1,11 @@
 How to implement
 ================
 
+5 - Implement CORS
+------------------
+* create @Configuration @EnableWebMvc class WebConfig implements WebMvcConfigurer
+* override addCorsMappings(CorsRegistry) method.
+
 4 - Manage Posts
 ----------------
 * create class PostController
