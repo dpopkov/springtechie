@@ -45,12 +45,14 @@ public class AuthService {
         return passwordEncoder.encode(password);
     }
 
-    public String login(LoginRequest loginRequest) {
+    public AuthenticationResponse login(LoginRequest loginRequest) {
         log.trace("login(LoginRequest) with {}", loginRequest);
         final Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginRequest.getUsername(), loginRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authenticate);
-        return jwtProvider.generateToken(authenticate);
+        final String token = jwtProvider.generateToken(authenticate);
+        log.trace("return generated token {}", token);
+        return new AuthenticationResponse(token, loginRequest.getUsername());
     }
 
     public Optional<org.springframework.security.core.userdetails.User> getCurrentUser() {

@@ -1,6 +1,11 @@
 How to implement
 ================
 
+6 - Fix Authentication
+----------------------
+* create class AuthenticationResponse
+* fix login methods in AuthController and AuthService
+
 5 - Implement CORS
 ------------------
 * create @Configuration @EnableWebMvc class WebConfig implements WebMvcConfigurer

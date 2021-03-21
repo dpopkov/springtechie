@@ -3,6 +3,7 @@ package com.example.springblog.controller;
 import com.example.springblog.dto.LoginRequest;
 import com.example.springblog.dto.RegisterRequest;
 import com.example.springblog.service.AuthService;
+import com.example.springblog.service.AuthenticationResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +31,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginRequest loginRequest) {
+    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
         log.trace("login(LoginRequest) with {}", loginRequest);
         return authService.login(loginRequest);
     }

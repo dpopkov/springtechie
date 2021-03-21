@@ -8,3 +8,4 @@ Steps of Implementation
 5. [Implement Login using JWT](Howto.md#2---implement-login-using-jwt).
 6. [Validate JWT](Howto.md#3---validate-jwt).
 7. [Manage Posts](Howto.md#4---manage-posts) (Create, Read).
+8. [Fix Authentication](Howto.md#6--fix-authentication).
