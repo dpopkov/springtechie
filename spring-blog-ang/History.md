@@ -1,6 +1,24 @@
 Steps of Implementation
 =======================
 
+3 - Implement Login
+-------------------
+* Add Router to constructor in RegisterComponent 
+* Use it in onSubmit method to go to RegisterSuccessComponent: `navigateByUrl('/register-success')`
+* Add path to RegisterSuccessComponent in app.module.ts
+* Add html to RegisterSuccessComponent
+* Add html and create loginForm group in LoginComponent.
+* Add onSubmit() method LoginComponent.
+* Create class LoginPayload, and add field to LoginComponent.
+* Add AuthService parameter to LoginComponent.
+* Add method login(LoginPayload) to AuthService.
+* Create class JwtAuthResponse.
+* Add ngx-webstorage to package.json.
+* Add LocalStorageService parameter to AuthService and use it in login method.
+* Add NgxWebstorageModule to app.module.ts
+* Add `href="/login"` to header component html.
+* Init loginPayload in LoginComponent constructor.
+
 2 - Implement Registration
 --------------------------
 * Create component Register: `ng g c auth/register --skipTests`
