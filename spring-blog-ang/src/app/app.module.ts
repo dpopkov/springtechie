@@ -9,11 +9,12 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {NgxWebstorageModule} from "ngx-webstorage";
 import { HomeComponent } from './home/home.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import {EditorModule} from "@tinymce/tinymce-angular";
+import {HttpClientInterceptor} from "./http-client-interceptor";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import {EditorModule} from "@tinymce/tinymce-angular";
       {path: 'add-post', component: AddPostComponent}
     ])
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,6 +21,15 @@ Steps of Implementation
             * Add EditorModule import to app.module.ts
         * Add html form to app-post page
         * Add css for add-post page
+    * Add `[formGroup]` and `[formControlName]` directives to add-post page
+    * Create method addPost() and addPostForm, title, body fields in AddPostComponent
+    * Create class PostPayload
+* Create AddPostService to communicate to backend: `ng g s add-post --skipTests`.
+    * Add AddPostService parameter to AddPostComponent constructor
+    * Add Router to AddPostComponent constructor, use it in addPost() method.
+* Add JWT token before posting new data to server
+    * Create class HttpClientInterceptor.
+    * Add HttpClientInterceptor to providers in app.module.ts.
 
 3 - Implement Login
 -------------------
