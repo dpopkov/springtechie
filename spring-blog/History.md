@@ -9,3 +9,4 @@ Steps of Implementation
 6. [Validate JWT](Howto.md#3---validate-jwt).
 7. [Manage Posts](Howto.md#4---manage-posts) (Create, Read).
 8. [Fix Authentication](Howto.md#6--fix-authentication).
+9. [Implement Asymmetric Encryption using Java Keystore](Howto.md#7---jwt-using-public-and-private-key) 

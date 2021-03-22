@@ -1,6 +1,18 @@
 How to implement
 ================
 
+7 - JWT using Public and Private Key
+------------------------------------
+* Implement Asymmetric Encryption using Java Keystore:
+    * create keystore: 
+        * `keytool -genkey -alias springblog -keyalg RSA -keystore springblog.jks -keysize 2048`
+        * `keytool -importkeystore -srckeystore springblog.jks -destkeystore springblog.jks -deststoretype pkcs12`
+        * copy springblog.jks to resources folder
+    * use keystore in JwtProvider
+        * create field KeyStore
+        * add methods getPrivateKey() and getPublicKey()
+        * use private key for token generation and public key for token validation
+
 6 - Fix Authentication
 ----------------------
 * create class AuthenticationResponse
