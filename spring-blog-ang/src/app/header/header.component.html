@@ -4,7 +4,10 @@
       <div class="col-md-6">  <!-- Title -->
         <h1><a href="" class="title">Spring Blog</a></h1>
       </div>
-      <div class="col-md-6">  <!-- Login and Register -->
+      <div class="col-md-3" *ngIf="userAuthenticated()">
+        <a href="/add-post" class="new-post">Add Post</a>
+      </div>
+      <div class="col-md-3">  <!-- Login and Register -->
         <a href="/login" class="login btn btn-primary">Login</a>
         <a href="/register" class="register btn btn-primary">Register</a>
       </div>

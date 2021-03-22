@@ -1,6 +1,27 @@
 Steps of Implementation
 =======================
 
+4 - Adding Blog Posts with Editor
+---------------------------------
+* Create Home page component: `ng g c home --skipTests`
+    * Add route for home to app.module.ts
+    * Add Router parameter to LoginComponent constructor.
+    * Call `router.navigateByUrl("/home")` in onSubmit() method.
+* Create 'Add Post' button to Header component.
+    * Create helper method in AuthService.
+    * Add AuthService parameter to HeaderComponent constructor.
+    * Add `*ngIf="authService.isAuthenticated()"` to 'Add Post' div.
+    * Add style class new-post for 'Add Post' button.
+* Create AddPost component: `ng g c add-post --skipTests`
+    * Add route for add-post to app.module.ts
+    * Add WYSIWYG editor to add-post page
+        * Install TinyMCE editor
+            * Add `"@tinymce/tinymce-angular"` dependency to package.json
+            * then run npm install when IDE prompts
+            * Add EditorModule import to app.module.ts
+        * Add html form to app-post page
+        * Add css for add-post page
+
 3 - Implement Login
 -------------------
 * Add Router to constructor in RegisterComponent 
