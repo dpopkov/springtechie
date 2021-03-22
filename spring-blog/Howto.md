@@ -12,6 +12,7 @@ How to implement
         * create field KeyStore
         * add methods getPrivateKey() and getPublicKey()
         * use private key for token generation and public key for token validation
+* Add CORS Filter to SecurityConfig: `http.cors();`
 
 6 - Fix Authentication
 ----------------------
