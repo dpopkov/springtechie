@@ -1,6 +1,17 @@
 Steps of Implementation
 =======================
 
+5 - Display Blog Posts
+----------------------
+* Add html to Home component.
+* Add getAllPosts() method to AddPostService.
+* Add AddPostService parameter to HomeComponent constructor, use it to get posts when init.
+* Map Home component to root path: `{path: '', component: HomeComponent}`
+* Add PostComponent: `ng g c post --skipTests`. 
+* Add ActivatedRoute and AddPostService parameters to PostComponent constructor.
+* Add method getPost() to AddPostService. 
+* Define route in app.modules.ts: `{path: 'post/:id', component: PostComponent}`.
+
 4 - Adding Blog Posts with Editor
 ---------------------------------
 * Create Home page component: `ng g c home --skipTests`
