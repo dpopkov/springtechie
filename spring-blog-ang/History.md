@@ -1,6 +1,13 @@
 Steps of Implementation
 =======================
 
+6 - Implement Logout
+--------------------
+* Add Logout button to Header component and css style for it.
+* Create logout() method in HeaderComponent.
+* Create logout() method in AuthService and use localStorageService to clear stored token and username.
+* Use ngIf with ng-template in html to control appearance of Login/Logout.
+
 5 - Display Blog Posts
 ----------------------
 * Add html to Home component.
