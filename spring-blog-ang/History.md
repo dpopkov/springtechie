@@ -1,6 +1,12 @@
 Steps of Implementation
 =======================
 
+7 - Implement AuthGuard
+-----------------------
+* Generate AuthGuard using CanActivate guard: `ng g g auth --skipTests`
+* Implement canActivate() method in AuthGuard.
+* Add `canActivate: [AuthGuard]` to add-post path in imports section of app.modules.ts. 
+
 6 - Implement Logout
 --------------------
 * Add Logout button to Header component and css style for it.
